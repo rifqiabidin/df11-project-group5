@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "SpreadsheetValue",
+  "fields": [
+    {"name": "timestamp", "type": "string"},
+    {"name": "email", "type": "string"},
+    {"name": "first_name", "type": "string"},
+    {"name": "last_name", "type": "string"},
+    {"name": "birth_date", "type": "string"},
+    {"name": "job", "type": "string"},
+    {"name": "marital", "type": "string"},
+    {"name": "education", "type": "string"},
+    {"name": "default", "type": "string"},
+    {"name": "housing", "type": "string"},
+    {"name": "loan", "type": "string"}
+  ]
+}
