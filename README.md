@@ -21,6 +21,9 @@ To initiate this project, the data team receives a dump file of customer profile
 ## Transformation
 
 ## Visualization
+![Dashboard Overview](./dashboard-1.png)
+
+![Target Market Segmentation](./dashboard-2.png)
 
 # Source
 - [Code](/src)
