@@ -12,6 +12,7 @@ To initiate this project, the data team receives a dump file of customer profile
 1. Analytical dashboard that shows customer segmentation and target market for housing loan product campaign
 
 ## Architecture
+![Architecture](./architecture.png)
 
 ## Streaming
 
