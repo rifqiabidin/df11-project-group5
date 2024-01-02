@@ -22,6 +22,6 @@ To initiate this project, the data team receives a dump file of customer profile
 ## Visualization
 
 # Source
-- [Code](/src/)
+- [Code](/src)
 - [Presentation]()
 - [Dashboard]()
