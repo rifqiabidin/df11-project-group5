@@ -14,6 +14,9 @@ To initiate this project, the data team receives a dump file of customer profile
 ## Architecture
 ![Architecture](./architecture.png)
 
+## Data Preparation
+We treat the dump file as opening account bank process by integrate it with application form. By this approach, the raw file got copied to google spreadsheet first. Then We doing data enrichment by adding user id and timestamp on spreadsheet. As we speak, the spreadhseet was integrated with google form as an application form for bank account opening. 
+
 ## Streaming
 
 ## Batch
