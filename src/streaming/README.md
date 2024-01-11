@@ -18,7 +18,7 @@
             
         git clone https://github.com/rifqiabidin/df11-project-group5.git
         
-    B. Open this project in terminal and navigate to the directory of kafka_avro folder	
+    B. Open this project in terminal and navigate to the directory of streaming folder	
         
         # change directory
         cd src/streaming
