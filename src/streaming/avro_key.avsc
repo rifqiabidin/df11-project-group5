@@ -1,7 +1,0 @@
-{
-  "type": "record",
-  "name": "SpreadsheetKey",
-  "fields": [
-    {"name": "email", "type": "string"}
-  ]
-}
