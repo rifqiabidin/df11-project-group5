@@ -74,8 +74,13 @@ Consist of cleaned and normalized data. In this layer we did feature encoding, s
    ![ERD](./erd%20_final_project.png)
 4. Gold Layer
 Consist of refined data and presented in a format suitable for reporting
+
 ## Visualization
+Analytical dashboard is one of key objectives on this project. Two dashboard have been created to provide insight for marketing team. The first dashboard shows overview insight for current customers demographics. It shows number of customers and customers who own housing loan that grouped by occupation and age group. We use simple score card to gives quick insight about number of customers and housing loan product. The barchart and stacked barchart used to shows it distribution among occupation and age group.
+
 ![Dashboard Overview](./dashboard-1.png)
+
+The second dashboard talks about target market numbers. We defined target market as customers who elligble to buy housing loan product under certain criteria, default record and age group. We use barchart to shows distribution among occupation and treemap to show proportion for educational level. Both education and occupation were used by marketing team to decide their pricing and communication strategy for marketing campaign.
 
 ![Target Market Segmentation](./dashboard-2.png)
 
