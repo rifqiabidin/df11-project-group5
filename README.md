@@ -71,7 +71,7 @@ We implement medallion architecture using dbt.
 Consist of raw state of the data source and select only the required column 
 2. Silver Layer
 Consist of cleaned and normalized data. In this layer we did feature encoding, standardization values, delete unneeded characters, and change the date into suitable format. Then we divide columsn into their own separate dimensions and fact table. To optimize it, we partition and cluster the table.
-   ![ERD](./erd_final_project.png)
+   ![ERD](./erd%20_final_project.png)
 4. Gold Layer
 Consist of refined data and presented in a format suitable for reporting
 ## Visualization
