@@ -1,0 +1,6 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'asia-southeast2-docker.pkg.dev/final-project-df11-group5/REPOSITORY/cloud-run-dbt', '-f', 'Dockerfile', '.' ]
+logsBucket: 'gs://logbuckets'
+options:
+  logging: GCS_ONLY

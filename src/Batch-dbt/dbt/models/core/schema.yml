@@ -1,0 +1,118 @@
+version: 2
+
+models:
+  - name: partclust_fact_bank_marketing
+    config:
+      cluster_by: age_group_id
+      partition_by:
+        - field: join_yearmonth
+        - data_type: date 
+  - name: fact_bank_marketing
+    description: "model to create fact table of bank marketing"
+    columns:
+      - name: id
+        description: "Identifier for user"
+        tests:
+          - not_null
+          - unique
+      - name: age_group_id
+        description: "Identifier for age groups"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_age_group')
+              field: age_group_id
+      - name: job_id
+        description: "Identifier for job types"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_job')
+              field: job_id
+      - name: education_id
+        description: "Identifier for education types"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_education')
+              field: education_id
+      - name: marital_id
+        description: "Identifier for marital types"      
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_marital')
+              field: marital_id     
+      - name: join_yearmonth
+        description: "date of user registration in year-month"
+        tests:
+          - not_null      
+      - name: has_default
+        description: "has credit in default?"
+        test:
+          - accepted_values:
+            values: [0, 1, null]
+      - name: has_housing
+        description: "has housing loan?"
+        test:
+          - accepted_values:
+            values: [0, 1, null]
+      - name: has_loan
+        description: "has personal loan?"
+        test:
+          - accepted_values:
+            values: [0, 1, null]
+
+  - name: dim_job
+    description: "model to create dimension table of job"
+    columns:
+    - name: job_id
+      tests:
+        - unique
+        - not_null
+    columns:
+    - name: job_type
+      tests:
+        - not_null
+        - accepted_values:
+            values: ['housemaid', 'services', 'admin', 'blue-collar', 'technician', 'retired', 'management', 'unemployed', 'self-employed', 'unknown', 'entrepreneur', 'student']
+            
+  - name: dim_education
+    description: "model to create dimension table of education"
+    columns:
+    - name: education_id
+      tests:
+        - not_null
+        - unique
+    columns:
+    - name: education_type
+      tests:
+        - not_null
+        - accepted_values:
+            values: ['basic', 'high school', 'professional course', 'unknown', 'university degree', 'illiterate']      
+
+  - name: dim_marital
+    description: "model to create dimension table of marital type"
+    columns:
+    - name: marital_id
+      tests:
+        - not_null
+        - unique
+    columns:
+    - name: marital_type
+      tests:
+        - not_null
+        - accepted_values:
+            values: ['married', 'single', 'divorced', 'unknown']
+
+  - name: dim_age_group
+    description: "model to create dimension table of age group"
+    columns:
+    - name: age_group_id
+      tests:
+        - not_null
+        - unique
+    columns:
+    - name: age_group
+      tests:
+        - not_null

@@ -1,0 +1,16 @@
+dbt_cloud_run:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      dataset: dwh_final_project
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /secrets/cloud-run-dbt-service-keyfile
+      location: asia-southeast2
+      method: service-account
+      priority: interactive
+      project: final-project-df11-group5
+      threads: 4
+      
+  

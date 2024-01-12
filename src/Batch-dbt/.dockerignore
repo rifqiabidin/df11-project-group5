@@ -1,0 +1,5 @@
+.dockerignore
+venv/
+python-testing/
+logs/
+dbt-service-keyfiles.json
